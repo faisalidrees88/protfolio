@@ -693,7 +693,7 @@ h1.hero-title { font-size:clamp(46px,4.7vw,68px); line-height:1.04; letter-spaci
           <div class="qa-stat-label">Years</div>
         </div>
         <div class="qa-stat">
-          <div class="qa-stat-num" aria-live="polite"></div>
+          <div class="qa-stat-num" aria-live="polite">6+</div>
           <div class="qa-stat-label">Projects</div>
         </div>
         <div class="qa-stat">
@@ -1579,7 +1579,7 @@ let projectFilter = 'all';
 let projectsExpanded = false;
 const projectLimit = 6;
 const reduceProjectMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-document.querySelectorAll('.qa-stat')[1].querySelector('.qa-stat-num').textContent = projectOrder.length;
+document.querySelectorAll('.qa-stat')[1].querySelector('.qa-stat-num').textContent = '6+';
 document.querySelectorAll('.qa-stat')[1].querySelector('.qa-stat-label').textContent = 'Projects showcased';
 function renderProjects(animate = false) {
   const matching = projectCards.filter(p => projectFilter === 'all' || p.type === projectFilter);
@@ -1597,7 +1597,7 @@ function renderProjects(animate = false) {
   const professional = projectOrder.filter(p=>p.type === 'professional').length;
   const academic = projectOrder.filter(p=>p.type === 'academic').length;
   document.querySelector('.project-count').textContent = projectFilter === 'all'
-    ? `${projectOrder.length} projects showcased · ${professional} professional + ${academic} academic · Showing ${visible.length} of ${matching.length}.`
+    ? `6+ projects showcased · ${professional} professional + ${academic} academic · Showing ${visible.length} of ${matching.length}.`
     : `${matching.length} ${projectFilter} projects · Showing ${visible.length} of ${matching.length}.`;
   balanceProjectRows(visible);
 }
